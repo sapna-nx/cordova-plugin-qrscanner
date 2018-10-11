@@ -282,7 +282,7 @@ module.exports = function(){
       }).then(function(mediaStream){
         activeMediaStream = mediaStream;
         var video = getVideoPreview();
-        video.src = URL.createObjectURL(mediaStream);
+        video.srcObject = mediaStream;
         success(calcStatus());
       }, function(err){
         // something bad happened
